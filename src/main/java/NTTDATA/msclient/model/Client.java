@@ -1,19 +1,23 @@
 package NTTDATA.msclient.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.NotBlank;
+import java.util.Date;
 
-@Document("client")
+
 @Builder
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Document(collection = "client")
 public class Client {
     @Id
     private String id;
@@ -35,4 +39,7 @@ public class Client {
 
     @NotBlank
     private String typeClient;
+
+    private  int age;
+
 }

@@ -7,6 +7,6 @@ import reactor.core.publisher.Mono;
 public interface ClientService {
     public Mono<Client> save(Client client);
     public Mono<Client> findByDni(String dni);
-    public Mono<Void> delete(Client client);
+    public Mono<Void> deletebyId(String id);
     public Flux<Client> findAll();
 }

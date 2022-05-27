@@ -1,4 +1,4 @@
-package NTTDATA.msclient.service.Impl;
+package NTTDATA.msclient.service;
 
 import NTTDATA.msclient.model.Client;
 import NTTDATA.msclient.repository.ClientRepository;
@@ -25,8 +25,8 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public Mono<Void> delete(Client client) {
-        return repository.delete(client);
+    public Mono<Void> deletebyId(String id) {
+        return repository.deleteById(id);
     }
 
     @Override
