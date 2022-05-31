@@ -20,7 +20,7 @@ import java.util.ArrayList;
 public class Client {
 
     @Id
-    private int id;
+    private String id;
 
     @NotBlank
     private String dni;

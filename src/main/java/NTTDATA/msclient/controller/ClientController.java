@@ -16,7 +16,7 @@ public class ClientController {
 
 
     @GetMapping("/getClient")
-    public Flux<Client> getClient(){
+    Flux<Client> getClient(){
         return clientService.findAll();
     }
     @PostMapping("/postClient")
