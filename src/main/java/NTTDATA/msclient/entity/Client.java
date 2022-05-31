@@ -7,8 +7,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+
 import javax.validation.constraints.NotBlank;
 import java.util.ArrayList;
 
@@ -19,8 +18,8 @@ import java.util.ArrayList;
 @NoArgsConstructor
 @Document(collection = "client")
 public class Client {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @NotBlank

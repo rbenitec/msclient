@@ -4,15 +4,16 @@ import NTTDATA.msclient.entity.Client;
 import NTTDATA.msclient.repository.ClientRepository;
 import NTTDATA.msclient.service.ClientService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Service
-@RequiredArgsConstructor
 public class ClientServiceImpl implements ClientService {
 
-    private  final ClientRepository repository;
+    @Autowired
+    private ClientRepository repository;
 
     @Override
     public Mono<Client> save(Client client) {
