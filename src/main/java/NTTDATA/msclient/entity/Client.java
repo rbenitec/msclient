@@ -1,16 +1,16 @@
-package NTTDATA.msclient.model;
+package NTTDATA.msclient.entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.validation.constraints.NotBlank;
-import java.util.Date;
+import java.util.ArrayList;
 
 
 @Builder
@@ -20,18 +20,14 @@ import java.util.Date;
 @Document(collection = "client")
 public class Client {
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
     @NotBlank
     private String dni;
 
     @NotBlank
     private String name;
-
-    @NotBlank
-    private String lastname;
-
-    private String email;
 
     private String phone;
 

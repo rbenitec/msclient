@@ -1,6 +1,6 @@
-package NTTDATA.msclient.service;
+package NTTDATA.msclient.service.implemt;
 
-import NTTDATA.msclient.model.Client;
+import NTTDATA.msclient.entity.Client;
 import NTTDATA.msclient.repository.ClientRepository;
 import NTTDATA.msclient.service.ClientService;
 import lombok.RequiredArgsConstructor;
@@ -16,17 +16,20 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public Mono<Client> save(Client client) {
+
         return repository.save(client);
     }
 
     @Override
     public Mono<Client> findByDni(String dni) {
+
         return repository.findByDni(dni);
     }
 
     @Override
-    public Mono<Void> deletebyId(String id) {
-        return repository.deleteById(id);
+    public Mono<Void> deleteClientById(int id) {
+
+        return repository.deleteClientById(id);
     }
 
     @Override

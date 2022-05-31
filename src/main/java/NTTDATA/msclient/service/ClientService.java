@@ -1,12 +1,12 @@
 package NTTDATA.msclient.service;
 
-import NTTDATA.msclient.model.Client;
+import NTTDATA.msclient.entity.Client;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 public interface ClientService {
     public Mono<Client> save(Client client);
     public Mono<Client> findByDni(String dni);
-    public Mono<Void> deletebyId(String id);
+    public Mono<Void> deleteClientById(int id);
     public Flux<Client> findAll();
 }
