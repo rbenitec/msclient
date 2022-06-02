@@ -1,7 +1,9 @@
 package NTTDATA.msclient.controller;
 
 import NTTDATA.msclient.entity.Client;
+import NTTDATA.msclient.model.CurrentAccount;
 import NTTDATA.msclient.service.ClientService;
+import NTTDATA.msclient.service.OperationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
@@ -12,8 +14,10 @@ import reactor.core.publisher.Mono;
 public class ClientController {
 
     @Autowired
-    ClientService clientService;
+    OperationService operationService;
 
+    @Autowired
+    ClientService clientService;
 
     @GetMapping("/getClient")
     Flux<Client> getClient(){
@@ -30,10 +34,16 @@ public class ClientController {
     }
 
     @PostMapping("/delete/{id}")
-    Mono<Void> deleteClient(@PathVariable("id") int id){
+    Mono<Void> deleteClient(@PathVariable("id") String id){
         return clientService.deleteClientById(id);
 
     }
+
+    @RequestMapping("/GetCurrent/{clientId}")
+    Flux<CurrentAccount> getCurrentAccounts (@PathVariable("clientId") String clientId){
+        return operationService.getCurrentAccounts(clientId);
+    }
+
 
 }
 

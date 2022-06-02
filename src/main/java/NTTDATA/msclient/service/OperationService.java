@@ -5,8 +5,8 @@ import reactor.core.publisher.Flux;
 
 public interface OperationService {
 
-    //Obtener las CurrentAccount de los clientes
-    Flux<CurrentAccount> getCurrentAccounts(int clientId);
+    //Metodos para obetener CurrentAccounts del usuario (RestTemplate)
+    Flux<CurrentAccount> getCurrentAccounts(String clientId);
 
 
     //Asignar cuentas a los clientes

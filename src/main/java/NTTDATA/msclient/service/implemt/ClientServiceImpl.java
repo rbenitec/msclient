@@ -28,9 +28,9 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public Mono<Void> deleteClientById(int id) {
+    public Mono<Void> deleteClientById(String id) {
 
-        return repository.deleteClientById(id);
+        return repository.deleteById(id);
     }
 
     @Override

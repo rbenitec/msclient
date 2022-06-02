@@ -27,14 +27,11 @@ public class Client {
 
     @NotBlank
     private String name;
-
     private String phone;
-
     private String address;
 
     @NotBlank
     private String typeClient;
-
     private  int age;
 
 }

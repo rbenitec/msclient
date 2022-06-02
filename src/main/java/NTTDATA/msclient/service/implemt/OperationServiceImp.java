@@ -13,10 +13,10 @@ import reactor.core.publisher.Flux;
 public class OperationServiceImp implements OperationService {
 
     @Autowired
-    private final RestTemplate restTemplate;
+    RestTemplate restTemplate;
 
     @Override
-    public Flux<CurrentAccount> getCurrentAccounts(int clientId) {
+    public Flux<CurrentAccount> getCurrentAccounts(String clientId) {
         Flux<CurrentAccount> currentAccount = restTemplate.getForObject("http://service-currentaccounts/current/byclient/"+clientId, Flux.class);
         return currentAccount;
     }

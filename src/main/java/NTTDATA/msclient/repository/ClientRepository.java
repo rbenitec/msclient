@@ -11,5 +11,5 @@ public interface ClientRepository extends ReactiveMongoRepository<Client, String
     Mono<Client> save(Client client);
     Mono<Client> findByDni(String dni);
 //    Mono<Void> delete(Client client);
-    Mono<Void> deleteClientById(int id);
+    //Mono<Void> deleteClientById(int id);
 }
