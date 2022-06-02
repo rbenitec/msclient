@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import reactor.core.publisher.Flux;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class OperationServiceImp implements OperationService {
@@ -17,7 +19,8 @@ public class OperationServiceImp implements OperationService {
 
     @Override
     public Flux<CurrentAccount> getCurrentAccounts(String clientId) {
-        Flux<CurrentAccount> currentAccount = restTemplate.getForObject("http://service-currentaccounts/current/byclient/"+clientId, Flux.class);
-        return currentAccount;
+        List<CurrentAccount> currentAccounts = restTemplate.getForObject("http://service-currentaccounts/current/byclient/"+clientId, List.class);
+        //Flux<CurrentAccount> currentAccount = restTemplate.getForObject("http://service-currentaccounts/current/byclient/"+clientId, Flux.class);
+        return Flux.fromIterable(currentAccounts);
     }
 }
