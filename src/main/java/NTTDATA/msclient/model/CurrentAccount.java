@@ -9,10 +9,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CurrentAccount {
 
-    private String nroAccount;
-    private double availableBalance;
-    private String typeCredit;         // Peronal o empresarial
-    private int commission;            // Sin limites de movimientos
+    private String numAccount;
+    private double balance;
+    private String type;         // 1: Ahorro - 2: Corrient - 3:Plazo fijo
+    private int commission;
     private int clientId;
     //private int managementId;
 

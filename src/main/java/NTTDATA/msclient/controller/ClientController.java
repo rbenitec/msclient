@@ -23,9 +23,12 @@ public class ClientController {
     Flux<Client> getClient(){
         return clientService.findAll();
     }
-    @PostMapping("/postClient")
+    @PostMapping("/create")
     Mono<Client> postClient(@RequestBody Client client){
+        String createClientErrorMessage = "The  application could NOT create the client";
+        String createClientSuccessMessage = "The application create the client";
         return clientService.save(client);
+
     }
 
     @GetMapping("/getClient/{dni}")
