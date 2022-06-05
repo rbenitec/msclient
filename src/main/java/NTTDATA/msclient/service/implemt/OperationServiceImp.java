@@ -21,6 +21,7 @@ public class OperationServiceImp implements OperationService {
     @Autowired
     ClientWebClient clientWebClient;
 
+    /*
     @Override
     public Flux<CurrentAccount> getCurrentAccounts(String clientId) {
         //return clientWebClient.getWebClient().get().uri("/byclient/"+clientId);
