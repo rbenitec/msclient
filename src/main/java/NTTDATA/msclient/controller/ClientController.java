@@ -46,7 +46,7 @@ public class ClientController {
 
     }
 
-    @RequestMapping("/GetCurrent/{clientId}")
+    @GetMapping("/GetCurrent/{clientId}")
     Flux<CurrentAccount> getCurrentAccounts (@PathVariable("clientId") String clientId){
         //return operationService.getCurrentAccounts(clientId);
         return webClientBuilder.build()
