@@ -10,15 +10,19 @@ import org.springframework.web.reactive.function.client.WebClient;
 @Getter
 @Setter
 public class ClientWebClient {
-    /*
+
     private final WebClient webClient;
 
     public ClientWebClient(WebClient.Builder builder) {
         this.webClient = builder.baseUrl("http://service-currentaccounts/current").build();
     }
-    */
+
+
+    /*
     @Bean
     public WebClient.Builder getWebClientBuilder(){
         return WebClient.builder();
     }
+
+     */
 }

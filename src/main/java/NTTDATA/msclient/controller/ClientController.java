@@ -46,6 +46,7 @@ public class ClientController {
 
     }
 
+    /*
     @GetMapping("/GetCurrent/{clientId}")
     Flux<CurrentAccount> getCurrentAccounts (@PathVariable("clientId") String clientId){
         //return operationService.getCurrentAccounts(clientId);
@@ -54,6 +55,12 @@ public class ClientController {
                 .uri("http://service-currentaccounts/current/byclient/"+clientId)
                 .retrieve()
                 .bodyToFlux(CurrentAccount.class);
+    }*/
+
+    @GetMapping("/GetCurrent/{clientId}")
+    Flux<CurrentAccount> getCurrentAccounts (@PathVariable("clientId") String clientId){
+        return operationService.getCurrentAccounts(clientId);
+
     }
 
 
