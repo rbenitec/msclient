@@ -1,6 +1,6 @@
 package NTTDATA.msclient.service;
 
-import NTTDATA.msclient.model.CurrentAccount;
+import NTTDATA.msclient.repository.model.CurrentAccount;
 import reactor.core.publisher.Flux;
 
 public interface OperationService {

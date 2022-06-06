@@ -1,4 +1,4 @@
-package NTTDATA.msclient.model;
+package NTTDATA.msclient.repository.model;
 
 import NTTDATA.msclient.entity.Client;
 import lombok.AllArgsConstructor;

@@ -1,15 +1,13 @@
 package NTTDATA.msclient.service.implemt;
 
 import NTTDATA.msclient.config.ClientWebClient;
-import NTTDATA.msclient.model.CurrentAccount;
+import NTTDATA.msclient.repository.model.CurrentAccount;
 import NTTDATA.msclient.service.OperationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import reactor.core.publisher.Flux;
-
-import java.util.List;
 
 @Service
 @RequiredArgsConstructor

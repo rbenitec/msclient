@@ -1,7 +1,7 @@
 package NTTDATA.msclient.controller;
 
 import NTTDATA.msclient.entity.Client;
-import NTTDATA.msclient.model.CurrentAccount;
+import NTTDATA.msclient.repository.model.CurrentAccount;
 import NTTDATA.msclient.service.ClientService;
 import NTTDATA.msclient.service.OperationService;
 import org.springframework.beans.factory.annotation.Autowired;

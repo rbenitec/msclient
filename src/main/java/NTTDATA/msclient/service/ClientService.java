@@ -1,7 +1,6 @@
 package NTTDATA.msclient.service;
 
 import NTTDATA.msclient.entity.Client;
-import NTTDATA.msclient.model.CurrentAccount;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
